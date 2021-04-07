@@ -1,5 +1,5 @@
 <div class="cart-wrapper">
-<div class="header-title" style="background: url(assets/images/background/header.jpg);">
+<div class="header-title" style="background-color: cornflowerblue;">
     <div class="container" id="mainDIV" >
     <div class="title">
         <h2>Cart</h2>
@@ -67,7 +67,7 @@
                         <span class="new-price">Grand total: {{getTotal()  | async | currency:productsService?.currency:'symbol'}}</span>
                      </div>
                   </div>
-                  <div class="mat-cell text-center"><a mat-raised-button  class="btn-project" [routerLink]="['/pages/checkout']" routerLinkActive="router-link-active" >Proceed To Checkout</a></div>
+                  <div class="mat-cell text-center"><a mat-raised-button  class="btn-project" color="primary" [routerLink]="['/pages/checkout']" routerLinkActive="router-link-active" >Proceed To Checkout</a></div>
                </div>
             </div>
          </mat-card>

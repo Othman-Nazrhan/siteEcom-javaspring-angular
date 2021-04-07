@@ -21,13 +21,11 @@ import { NgxImageZoomModule } from 'ngx-image-zoom';
 
 import { ProductCarouselComponent } from './../shop/home/product-carousel/product-carousel.component';
 import { from } from 'rxjs';
-
 import { BrandsComponent } from './widgets/brands/brands.component';
 import { CategoriesComponent } from './widgets/categories/categories.component';
 import { PopularProductsComponent } from './widgets/popular-products/popular-products.component';
 import { ProductZoomComponent } from './products/product-details/product-zoom/product-zoom.component';
 
-import { AboutProductsComponent } from './home/about-products/about-products.component';
 
 
 @NgModule({
@@ -47,8 +45,7 @@ import { AboutProductsComponent } from './home/about-products/about-products.com
     BrandsComponent,
     CategoriesComponent,
     PopularProductsComponent,
-    ProductZoomComponent,
-    AboutProductsComponent
+    ProductZoomComponent
 
   ],
   imports: [

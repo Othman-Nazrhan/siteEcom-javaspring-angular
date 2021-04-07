@@ -207,14 +207,14 @@ export class AppComponent implements OnInit {
 
 
     /** spinner starts on init */
-    this.spinner.show();
+    // this.spinner.show();
 
-    setTimeout(() => {
-      /** spinner ends after 5 seconds */
-      this.spinner.hide();
-    }, 5000);
+    // setTimeout(() => {
+    //   /** spinner ends after 5 seconds */
+    //   this.spinner.hide();
+    // }, 5000);
 
-    this.scrollElem = document.querySelector('#moveTop');
+    // this.scrollElem = document.querySelector('#moveTop');
     // this.scrollElem.scrollIntoView();
   }
 
@@ -227,16 +227,16 @@ export class AppComponent implements OnInit {
   //   this.flag = flag;
   // }
 
-  onActivate(event) {
-    const scrollToTop = window.setInterval(() => {
-        const pos = window.pageYOffset;
-        if (pos > 0) {
-            window.scrollTo(0, pos - 20); // how far to scroll on each step
-        } else {
-            window.clearInterval(scrollToTop);
-        }
-    }, 16);
-}
+//   onActivate(event) {
+//     const scrollToTop = window.setInterval(() => {
+//         const pos = window.pageYOffset;
+//         if (pos > 0) {
+//             window.scrollTo(0, pos - 20); // how far to scroll on each step
+//         } else {
+//             window.clearInterval(scrollToTop);
+//         }
+//     }, 16);
+// }
 
 
 }

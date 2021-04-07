@@ -27,11 +27,7 @@ import { OrderByPipe } from './pipes/order-by.pipe';
 import { ProductService } from './services/product.service';
 import { CartService } from './services/cart.service';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { BannersComponent } from './banners/banners.component';
 import { ShoppingWidgetsComponent } from './shopping-widgets/shopping-widgets.component';
-import { BannerPromotionComponent } from './banner-promotion/banner-promotion.component';
-import { CategoriesSectionComponent } from './categories-section/categories-section.component';
-import { FooterTwoComponent } from './footer-two/footer-two.component';
 import {MatBadgeModule} from '@angular/material/badge';
 
 import { AppSettings } from './services/color-option.service'
@@ -45,11 +41,7 @@ import { from } from 'rxjs';
     MenuComponent,
     SidebarComponent,
     OrderByPipe,
-    BannersComponent,
     ShoppingWidgetsComponent,
-    BannerPromotionComponent,
-    CategoriesSectionComponent,
-    FooterTwoComponent,
   ],
   imports: [
     CommonModule,
@@ -101,13 +93,8 @@ import { from } from 'rxjs';
     FooterComponent,
     MenuComponent,
     SidebarComponent,
-    BannersComponent,
     FlexLayoutModule,
     ShoppingWidgetsComponent,
-
-    BannerPromotionComponent,
-    CategoriesSectionComponent,
-    FooterTwoComponent
 
   ],
   providers: [

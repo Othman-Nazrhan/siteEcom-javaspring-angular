@@ -3,14 +3,14 @@
     <mat-card fxLayout="column">
         <div class="product-img" [routerLink]="['/home/product', product.id]">
             <a class="product-link" >
-              <img [src]="product.pictures" alt="">
+              <img [src]="product.pictures.id" alt="">
            </a>
         </div>
          <div class="product-info-wrapper">
             <span class="category"></span>
             <div class="title-wrap" fxLayout="row" fxLayoutAlign="space-between center">
                <h4 [routerLink]="['/home/fruit, fruit.id']">{{product.name}}</h4>
-               <p>{{product.price}}$/kg</p>
+               <p>{{product.price}}DH</p>
             </div>
 
                 <div class="stars" fxLayout="row" >
