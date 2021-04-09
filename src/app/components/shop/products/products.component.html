@@ -35,7 +35,7 @@
             <mat-card fxLayout="column">
               <div class="product-img" [routerLink]="['/home/product', product.id]">
                 <a class="product-link">
-                  <img [src]="product.pictures" alt="">
+                  <img [src]="product.pictures[0]" alt="">
                 </a>
               </div>
               <div class="product-info-wrapper">

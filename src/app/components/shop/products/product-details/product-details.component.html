@@ -25,7 +25,7 @@
                        <button mat-icon-button  fxHide="false" fxHide.gt-md>
                           <mat-icon>fullscreen</mat-icon>
                        </button>
-                       <img [src]="product.pictures"/>
+                       <img [src]="product.pictures[0]"/>
                     </div>
                     <a (click)="openProductDialog(product, bigProductImageIndex)"><mat-icon>zoom_in</mat-icon></a>
                  </mat-card>
