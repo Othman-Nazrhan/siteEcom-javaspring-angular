@@ -15,6 +15,7 @@ import { ShopModule } from './components/shop/shop.module';
 import { SharedModule } from './components/shared/shared.module';
 
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 
 
@@ -35,8 +36,8 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    NgxImgZoomModule
-
+    NgxImgZoomModule,
+    SweetAlert2Module.forRoot(),
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]

@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Product } from 'src/app/modals/product.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { map } from 'rxjs/operators';
+import { CONSTANTS } from '../config/constants';
 
 
 
@@ -26,7 +27,7 @@ export class ProductService {
   }
 
   private products(): Observable<Product[]> {
-    return this.httpClient.get<Product[]>('https://run.mocky.io/v3/5932ad27-da16-40c0-b785-475bc57c15ec');
+    return this.httpClient.get<Product[]>(CONSTANTS.EndPoints.PRODUCTS_LIST);
   }
 
 

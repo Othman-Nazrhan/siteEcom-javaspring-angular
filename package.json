@@ -25,6 +25,7 @@
     "@angular/platform-browser-dynamic": "^9.0.0",
     "@angular/platform-server": "^9.0.0",
     "@angular/router": "^9.0.0",
+    "@sweetalert2/ngx-sweetalert2": "^9.0.0",
     "angular-font-awesome": "^3.1.2",
     "bootstrap": "^4.6.0",
     "core-js": "^3.6.4",
@@ -35,6 +36,7 @@
     "ngx-spinner": "^8.0.3",
     "ngx-swiper-wrapper": "^8.0.0",
     "rxjs": "^6.5.4",
+    "sweetalert2": "^10.16.0",
     "tslib": "^1.9.0",
     "zone.js": "^0.10.2"
   },

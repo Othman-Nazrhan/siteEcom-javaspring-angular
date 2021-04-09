@@ -1,5 +1,7 @@
+import { ILoginVO } from '../../../modals/loginVO';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { CONSTANTS } from '../config/constants';
 
 @Injectable({
   providedIn: 'root'
@@ -8,8 +10,11 @@ export class AuthService {
 
   constructor(private http: HttpClient  ) { }
 
-  login(data :{email : string  } ){
-    return this.http.post("https://run.mocky.io/v3/83d5c6c7-a3e9-402d-bcdf-f2c54c88d773" , data)
- 
+  login(data : ILoginVO ){
+    return this.http.post(CONSTANTS.EndPoints.AUTHENTICATION , data)
+  }
+
+  signup(data : ILoginVO ){
+    return this.http.post(CONSTANTS.EndPoints.SIGN_UP , data)
   }
 }
