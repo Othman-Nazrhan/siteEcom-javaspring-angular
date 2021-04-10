@@ -1,3 +1,5 @@
+import { UserResource } from './modals/user-resource';
+import { User } from './components/shared/user';
 import { Component, OnInit } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { SidenavMenu } from './components/shared/sidebar/sidebar-menu.model';
@@ -18,10 +20,15 @@ export class AppComponent implements OnInit {
 
   public flag:any;
 
+  public user : UserResource;
+
   title = 'ecommerce';
   scrollElem;
   public settings: Settings;
-  constructor(private spinner: NgxSpinnerService, public router: Router, public appSettings:AppSettings) {
+  constructor(private spinner: NgxSpinnerService,
+    public router: Router,
+    public appSettings:AppSettings,
+    private userService: User) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.url = event.url;
@@ -39,10 +46,11 @@ export class AppComponent implements OnInit {
   }
   ngAfterViewInit(){
     this.router.events.subscribe(event => {
+      this.user = this.userService.userInfos;
       if (event instanceof NavigationEnd) {
           window.scrollTo(0,0);
       }
-    })  
+    })
   }
 
   navItems: SidenavMenu[] = [
@@ -162,7 +170,7 @@ export class AppComponent implements OnInit {
         }
       ]
     },
-    
+
     {
       displayName: 'Pages',
       iconName: 'report_problem',
@@ -201,6 +209,11 @@ export class AppComponent implements OnInit {
     }
   ];
 
+  logout(){
+    this.user = null;
+    this.userService.removeUser();
+    this.router.navigateByUrl("home");
+  }
 
 
   ngOnInit() {

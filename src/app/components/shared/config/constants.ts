@@ -12,6 +12,10 @@ export namespace CONSTANTS {
     }
 
     export class Messages {
-      static readonly DEFAULT_ERROR: string =  "Une erreur interne s'est produite"
+      static readonly DEFAULT_ERROR: string =  "Une erreur interne s'est produite";
+    }
+
+    export class LocalStorage {
+      static readonly AUTHENTICATION_OBJECT: string =  "AUTH_OBJECT";
     }
 }

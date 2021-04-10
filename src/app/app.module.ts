@@ -1,3 +1,4 @@
+import { User } from './components/shared/user';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
@@ -24,7 +25,6 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
   declarations: [
     AppComponent,
     MainComponent,
-
   ],
   imports: [
     NgxSpinnerModule,
@@ -39,7 +39,7 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
     NgxImgZoomModule,
     SweetAlert2Module.forRoot(),
   ],
-  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}, User],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
