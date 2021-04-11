@@ -53,7 +53,7 @@ export class MyAccountComponent implements OnInit {
           token : res.token,
           role: (res.admin) ? ROLES_ENUM.ADMIN : ROLES_ENUM.USER,
         };
-debugger;
+
         localStorage.setItem(CONSTANTS.LocalStorage.AUTHENTICATION_OBJECT, JSON.stringify(usr));
 
         //INIT OBEJECT USER
@@ -89,14 +89,17 @@ debugger;
 
 
     this.authService.signup(loginVO).subscribe(
-      (res) =>
+      (res) =>{
       Swal.fire({
-        title: 'Congratulations',
-        text: "Your account has been created successfully you can now log in!",
-        timer: 8000,
-        heightAuto: false,
-        icon : "success"
-      }),
+            title: 'Congratulations',
+            text: "Your account has been created successfully you can now log in!",
+            timer: 8000,
+            heightAuto: false,
+            icon : "success"
+          })
+        this.router.navigateByUrl("home");
+      },
+
       (error) => {
         let msg = CONSTANTS.Messages.DEFAULT_ERROR;
         try {
@@ -108,10 +111,14 @@ debugger;
           timer: 8000,
           heightAuto: false,
           icon : "error"
-        })
+        });
       }
     );
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    if(this.user.userInfos.userName != ""){
+      this.router.navigateByUrl("home");
+    }
+  }
 }

@@ -32,7 +32,7 @@
 
                   <div class="widgets-left" fxLayout="row">
                     <div class="widget-text" *ngIf="user?.role == 'ADMIN'" >
-                      <a fxShow="false" fxShow.gt-xs [routerLink]="['/pages/my-account']" routerLinkActive="router-link-active" ><mat-icon>list</mat-icon>Espace ADMIN</a>
+                      <a fxShow="false" fxShow.gt-xs href='http://localhost:5000/addproduct' routerLinkActive="router-link-active" ><mat-icon>list</mat-icon>Espace ADMIN</a>
                     </div>
 
                     <div class="widget-text" *ngIf="!user?.role || user?.role != 'ADMIN'">
